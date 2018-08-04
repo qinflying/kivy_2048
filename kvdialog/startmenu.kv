@@ -1,0 +1,26 @@
+#:kivy 1.10.0
+#:import define define
+
+<CFLabel@Label>:
+    font_name: define.FONT_COMMON
+
+<CFButton@Button>:
+    font_name: define.FONT_COMMON
+
+<CStartMenu>:
+    canvas:
+        Color:
+            rgba:(1, 1, 1, 0.5)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    CFButton:
+        text:'开始游戏'
+        size_hint: (.25, .15)
+        pos : (root.width/2 - self.size[0]/2., root.height * 6. /10)
+        on_release : root.on_entergame()
+    CFButton:
+        text:'退出游戏'
+        size_hint: (.25, .15)
+        pos : (root.width/2 - self.size[0]/2., root.height * 3. /10)
+        on_release : root.on_quitgame()
