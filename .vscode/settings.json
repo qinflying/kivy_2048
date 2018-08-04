@@ -7,4 +7,7 @@
         "**/.DS_Store": true,
         "**/*.py[cod]" : true,
       },
+      "python.linting.pylintArgs": [
+          "--disable=E0611,C0111"
+      ]
 }

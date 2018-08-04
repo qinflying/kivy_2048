@@ -1,4 +1,5 @@
 #-*- coding:utf-8 -*-
+
 def Game():
     import gminit
     gminit.Init()

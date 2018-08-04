@@ -1,10 +1,40 @@
 #:kivy 1.10.0
 #:import commonutil commonutil
 
-<CPlayMenu>:
+<CBoxContainer@FloatLayout>:
     canvas:
         Color:
-            rgba:commonutil.ToColor(255, 174, 201, 202)
+            rgba:commonutil.ToColor(222, 207, 255, 202)
         Rectangle:
             pos:self.pos
             size:self.size
+    CFButton:
+        text:"这也是个按钮"
+
+<CPlayMenu>:
+    m_BoxContainer: m_BoxContainer #box容器标示
+    canvas.before:
+        Color:
+            rgba:(1, 1, 1, 0.5)
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    Button:
+        canvas:
+            Color:
+                rgba:1,0,0,0.5
+            Rectangle:
+                pos:self.pos
+                size:self.size 
+        size:640, 320
+        pos:0, 200
+    Button:
+        id:m_BoxContainer
+        canvas:
+            Color:
+                rgba:1,0,1,0.5
+            Rectangle:
+                pos:self.pos
+                size:self.size 
+        size:320, 320
+        pos:0, 0

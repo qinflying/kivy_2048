@@ -17,6 +17,8 @@ class CStartMenu(Screen):
         
         print "switch_to menu:", oPlayMenu
         self.manager.switch_to(oPlayMenu)
+
+        oPlayMenu.buildboxs()
             
 
     def on_quitgame(self):
