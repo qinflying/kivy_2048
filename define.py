@@ -8,3 +8,4 @@ FONT_HEI = "FontHei"
 
 #界面
 START_MENU = "startmenu"
+PLAY_MENU = "playmenu"
